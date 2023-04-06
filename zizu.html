@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>zizu</title>
+</head>
+
+<body>
+  <img style="width:100px;height: 100px;" id="img">
+  <script>
+    const search = location.search.substring(1)
+    const params = {};
+    search.split('&').forEach(p => {
+      const pairs = p.split('=')
+      params[pairs[0]] = pairs[1]
+    })
+    document.querySelector('#img').src = params.url
+  </script>
+
+</body>
+
+</html>
