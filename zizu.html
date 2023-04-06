@@ -9,7 +9,16 @@
 </head>
 
 <body>
-  <img style="position:absolute;width:100px;height: 100px;" id="img">
+  <style>
+    img {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      left: 0;
+      top: 0;
+    }
+  </style>
+  <img id="img">
   <script>
     const search = location.search.substring(1)
     const params = {};
